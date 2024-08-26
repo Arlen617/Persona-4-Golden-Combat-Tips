@@ -3,11 +3,11 @@
 /* RESET */
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: inherit;
+  margin: 0;
   margin-bottom: var(--margin-bottom);
+  padding: 0;
 }
 
 /* VARIABLES */
@@ -15,19 +15,16 @@
 :root {
 
 /* COLOR */
---text: #100f08;
+--accent: #527af2;
 --background: #ffd818;
 --primary: #c1a619;
 --secondary: #7bf27d;
---accent: #527af2;
+--text: #100f08;
 
 /* COSMETICS */
 --shadow:black 3px 3px;
-
-
-
 /* GENERAL SPACING */
---margin-bottom: 3rem;}
+--margin-bottom: 3rem; }
 
 /* UTILITY */
 
@@ -49,38 +46,37 @@ body {
   font-weight: 400;
 }
 
-
 .nav-title {
+  background-color: var(--primary);
+  border-radius: 100px;
+  box-shadow: var(--shadow);
+  color: white;
   font-size: 4rem;
   font-weight: 700;
-  border-radius: 100px;
-  background-color: var(--primary);
-  color: white;
   text-shadow: var(--shadow);
-  box-shadow: var(--shadow);
-  
+  margin-top: 1rem;
 }
 
 .links {
-  width: 70%;
   margin: 0 auto 3rem auto;
+  width: 70%;
 }
 
 a {
-  display: block;
-  text-decoration: none;
-  color: var(--text);
   background: linear-gradient(to left, var(--secondary), var(--background), var(--secondary));
   border-radius: 20px;
-  text-align: center;
-  width: 100%;
   box-shadow: var(--shadow);
+  color: var(--text);
+  display: block;
   font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 
 a:hover, a:focus {
-  transform: scale(1.1);
   background: var(--secondary);
+  transform: scale(1.1);
 }
 
 a:visited {
@@ -92,14 +88,14 @@ li, a {
 }
 
 main header {
-  font-size: 3rem;
   background: linear-gradient(to right, var(--secondary), var(--background), var(--secondary) );
   border-radius: 50px;
-  padding: 1rem;
   box-shadow: var(--shadow);
-  text-shadow: var(--shadow);
   color: white;
+  font-size: 2rem;
   font-weight: 500;
+  padding: 1rem;
+  text-shadow: var(--shadow);
 }
 
 p {
@@ -110,11 +106,11 @@ p {
 }
 
 code {
-  color: var(--secondary);
   background-color: var(--primary);
   border-radius: 50px;
-  padding: .1rem;
   box-shadow: var(--shadow);
+  color: var(--secondary);
+  padding: .1rem;
 }
 
 @keyframes lights {
@@ -135,13 +131,8 @@ code {
     scroll-behavior: smooth;
 }
 
-  a:target header {
-    animation-name: lights;
-    animation-duration: 1s;
-    animation-delay: 0;
-    animation-direction: alternate;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
+  section:target header, a:active {
+    animation: lights 1s 0s infinite alternate forwards;
   }
 }
 
@@ -151,6 +142,7 @@ code {
     font-size: 1.4rem;
     box-shadow: none;
     width: 100%;
+    
   }
 
   nav {
@@ -164,6 +156,11 @@ code {
 
   .main-doc {
     margin-left: 41%;
+    margin-right: 1%;
+  }
+
+  section:first-of-type{
+    margin-top: 1rem;
   }
 }
 
