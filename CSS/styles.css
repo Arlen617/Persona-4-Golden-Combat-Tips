@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto%20Serif:700|Roboto%20Serif:400');
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  margin-bottom: var(--margin-bottom);
+}
+
+/* VARIABLES */
+
+:root {
+
+/* COLOR */
+--text: #100f08;
+--background: #ffd818;
+--primary: #c1a619;
+--secondary: #7bf27d;
+--accent: #527af2;
+
+/* COSMETICS */
+--shadow:black 3px 3px;
+
+
+
+/* GENERAL SPACING */
+--margin-bottom: 3rem;}
+
+/* UTILITY */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.centertxt {
+  text-align: center;
+}
+
+/*STYLES */
+
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Roboto Serif', sans-serif;
+  font-weight: 400;
+}
+
+
+.nav-title {
+  font-size: 4rem;
+  font-weight: 700;
+  border-radius: 100px;
+  background-color: var(--primary);
+  color: white;
+  text-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+  
+}
+
+.links {
+  width: 70%;
+  margin: 0 auto 3rem auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  background: linear-gradient(to left, var(--secondary), var(--background), var(--secondary));
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  box-shadow: var(--shadow);
+  font-size: 1.1rem;
+}
+
+a:hover, a:focus {
+  transform: scale(1.1);
+  background: var(--secondary);
+}
+
+a:visited {
+  color: var(--accent);
+}
+
+li, a {
+  margin-bottom: 1rem;
+}
+
+main header {
+  font-size: 3rem;
+  background: linear-gradient(to right, var(--secondary), var(--background), var(--secondary) );
+  border-radius: 50px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  text-shadow: var(--shadow);
+  color: white;
+  font-weight: 500;
+}
+
+p {
+  background-color: var(--primary);
+  border-radius: 20px;
+  padding: 1rem;
+  text-indent: 3rem;
+}
+
+code {
+  color: var(--secondary);
+  background-color: var(--primary);
+  border-radius: 50px;
+  padding: .1rem;
+  box-shadow: var(--shadow);
+}
+
+@keyframes lights {
+  10% {background: linear-gradient(to right, var(--secondary), var(--background) 10% , var(--secondary) )}
+  20% {background: linear-gradient(to right, var(--secondary), var(--background) 20%, var(--secondary) )}
+  30% {background: linear-gradient(to right, var(--secondary), var(--background) 30%, var(--secondary) )}
+  40% {background: linear-gradient(to right, var(--secondary), var(--background) 40%, var(--secondary) )}
+  50% {background: linear-gradient(to right, var(--secondary), var(--background) 50%, var(--secondary) )}
+  60% {background: linear-gradient(to right, var(--secondary), var(--background) 60%, var(--secondary) )}
+  70% {background: linear-gradient(to right, var(--secondary), var(--background) 70%, var(--secondary) )}
+  80% {background: linear-gradient(to right, var(--secondary), var(--background) 80%, var(--secondary) )}
+  90% {background: linear-gradient(to right, var(--secondary), var(--background) 90%, var(--secondary) )}
+  100% {background: linear-gradient(to right, var(--secondary), var(--background) 100%, var(--secondary) )}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+}
+
+  a:target header {
+    animation-name: lights;
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
+  .nav-title {
+    font-size: 1.4rem;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  nav {
+    position: fixed;
+    width: 40%;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    z-index: 1;
+  }
+
+  .main-doc {
+    margin-left: 41%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: whitesmoke;
+--background: #333;
+--primary: #3f3c2a;
+--secondary: #355e36;
+--accent: #527af2;
+  }
+}
