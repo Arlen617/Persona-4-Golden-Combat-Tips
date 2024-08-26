@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto%20Serif:700|Roboto%20Serif:400');
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  margin-bottom: var(--margin-bottom);
+}
+
+/* VARIABLES */
+
+:root {
+
+/* COLOR */
+--text: #100f08;
+--background: #ffd818;
+--primary: #c1a619;
+--secondary: #7bf27d;
+--accent: #527af2;
+
+
+
+/* GENERAL SPACING */
+--margin-bottom: 3rem;}
+
+/* UTILITY */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.centertxt {
+  text-align: center;
+}
+
+/*STYLES */
+
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Roboto Serif', sans-serif;
+  font-weight: 400;
+}
+
+
+.nav-title {
+  font-size: 4rem;
+  font-weight: 700;
+  border-radius: 100px;
+  background-color: var(--primary);
+  color: white;
+  text-shadow: black 5px 5px;
+  box-shadow: black 5px 5px;
+  
+}
+
+.links {
+  width: 70%;
+  margin: 0 auto 3rem auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  background: linear-gradient(to left, var(--secondary), var(--background), var(--secondary));
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  box-shadow: black 5px 5px;
+}
+
+li, a {
+  margin-bottom: 1rem;
+}
+
+main header {
+  font-size: 3rem;
+  background: linear-gradient(to left, var(--secondary), var(--background), var(--secondary));
+  border-radius: 50px;
+  padding: 1rem;
+  box-shadow: black 5px 5px;
+  text-shadow: black 5px 5px;
+  color: white;
+  font-weight: 500;
+}
+
+p {
+  background-color: var(--primary);
+  border-radius: 20px;
+  padding: 1rem;
+  text-indent: 3rem;
+}
+
+code {
+  color: var(--secondary);
+  background-color: var(--primary);
+  border-radius: 50px;
+  padding: .1rem;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+}
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: 2rem;
+  }
+
+  .invsidebar {
+    position: fixed;
+    max-width: fit-content;
+  }
+
+  .links {
+    display: block;
+    width: 100%;
+    overflow: scroll;
+    max-height: 100vh;
+  }
+
+  .nav-title {
+    font-size: 2rem;
+  }
+}
